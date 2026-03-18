@@ -1,0 +1,183 @@
+/* Reseteo básico para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Usamos una fuente similar */
+    background-color: #f6f7f9; /* Color de fondo gris muy claro */
+    color: #333;
+    padding: 40px;
+}
+
+/* Contenedor principal para centrar el diseño */
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Título principal "Autoriego - Monitor" */
+.main-title {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+/* Estilos comunes para las tarjetas */
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03); /* Sombra suave */
+    position: relative;
+    overflow: hidden;
+    height: 120px; /* Altura fija para alinearlas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Estilo para la tarjeta "Humedad %" (más oscura) */
+.card-dark {
+    background-color: #3e4c5b;
+    color: #fff;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-label {
+    font-size: 1rem;
+    font-weight: 400;
+    color: inherit;
+}
+
+.card-value {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+/* Línea decorativa en la parte inferior de la tarjeta */
+.card-line {
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    right: 20px;
+    height: 4px;
+    background-color: #3e4c5b; /* Mismo color que la tarjeta oscura */
+    border-radius: 2px 2px 0 0;
+}
+
+/* Línea más delgada para las otras tarjetas */
+.card-line-thin {
+    height: 2px;
+}
+
+/* Iconos de ejemplo simulados (requiere librería de iconos o SVG) */
+.icon-droplet::before { content: "💧"; opacity: 0.5; }
+.icon-thermometer::before { content: "🌡️"; opacity: 0.5; }
+
+/* Contenedor de botones y controles */
+.controls-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+}
+
+/* Botones con estilo personalizado */
+.btn {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+/* Botón principal azul "Encender Pump" */
+.btn-primary {
+    background-color: #3182ce;
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #2b6cb0;
+}
+
+/* Botón secundario "Apagar Pump" */
+.btn-secondary {
+    background-color: #e2e8f0;
+    color: #333;
+}
+.btn-secondary:hover {
+    background-color: #cbd5e0;
+}
+
+/* Botón "Refrescar" con borde */
+.btn-outline {
+    background-color: transparent;
+    color: #3182ce;
+    border: 1px solid #3182ce;
+}
+.btn-outline:hover {
+    background-color: rgba(49, 130, 206, 0.05);
+}
+
+/* Sección de Registro reciente (Tabla simulada con Flex) */
+.register-section {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la "tabla" */
+.register-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.register-row {
+    display: flex;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 15px 10px;
+}
+
+/* Fila de cabecera con texto en negrita y alineado a la izquierda */
+.head-row {
+    font-weight: bold;
+    color: #4a5568;
+    background-color: #edf2f7;
+    border-radius: 4px;
+}
+
+.cell {
+    flex: 1; /* Distribuye el espacio uniformemente */
+    text-align: left;
+    padding-left: 10px;
+}
+
+/* Fila de ejemplo vacío */
+.empty-row {
+    color: #cbd5e0;
+}
